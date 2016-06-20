@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!--  linking pages using the ruby link_to helper -->
+    <ul>
+      <li class="btn btn-default"><%= link_to 'Home', root_path %></li>
+      <li class="btn btn-default"><%= link_to 'About', about_path %></li>
+      <li class="btn btn-default"><%= link_to 'Characters', character_path %></li>
+      <li class="btn btn-default"><%= link_to 'FAQ', faq_path %></li>
+      <% if 2 == 1 %>   <!-- you can use if conditionals to determine what content is created-->
+        <liclass="btn btn-default"><%= link_to 'Contact', contact_path %></li>
+      <% end %>
+    </ul>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>

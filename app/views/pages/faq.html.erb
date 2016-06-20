@@ -1,0 +1,10 @@
+<h1>Pages#faq</h1>
+
+<% @questions.each_with_index do |q, i| %>
+  <% heading_class = "heading" + i.to_s %>
+  <h2 class="<%= heading_class %>"> <%= (i+1).to_s %>. <%= q %> </h2>
+  <% end %>
+
+<!-- <h1><%= @current_question %></h1> -->
+
+<p>Find me in app/views/pages/faq.html.erb</p>
