@@ -5,7 +5,9 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   #note: the left hand side contains the HTTP request (/about), and the right side is the action (telling the pages controller to go the about method)
 
-  get "/characters/:page", to: "characters#show", as: "character"
+  get "/characters/:page", to: "characters#show", as: "characters"
+
+  # get "/characters", to: "characters#show"
 
   #get 'pages/faq'
   get 'faq', to: 'pages#faq'
